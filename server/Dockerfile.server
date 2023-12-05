@@ -1,0 +1,9 @@
+FROM node:14
+EXPOSE 4000
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+RUN npm install -g ts-node
+RUN npm install cors @types/cors
+COPY . .
+CMD [ "ts-node", "src/server.ts" ]

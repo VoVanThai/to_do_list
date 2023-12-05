@@ -1,0 +1,21 @@
+{
+  "name": "todolist-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && ts-node src/server.ts --ignore client",
+    "client": "cd client && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "axios": "^1.6.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "keywords": [],
+  "description": ""
+}
